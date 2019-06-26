@@ -8,7 +8,7 @@
     <title>为你推荐</title>
     <link rel="stylesheet" type="text/css" href="/static/css/index.css" />
     <script>
-    {% if not name %}
+    {% if not stu_id %}
         alert("你还没有登录，请先登录....");
         window.location.href="/login/login";
     {% endif %}
@@ -16,13 +16,13 @@
 </head>
 <body>
     <div class="user">
-        <p>当前用户：{{ name }} | <a href="/login/login">注销</a></p>
+        <p>当前用户：{{ stu_id }} | <a href="/login/login">注销</a></p>
     </div><!--左上角用户登录状态-->
 
     <div class="recommend">
         <div class="choose center">
-            <a href="/index/index/{{ name }}" style="background-color: {{ color1 }}">为你推荐</a>
-            <a href="/index/hot/{{ name }}" style="background-color: {{ color2 }}">热门图书</a>
+            <a href="/index/index/{{ stu_id }}/{{ grade }}" style="background-color: {{ color1 }}">为你推荐</a>
+            <a href="/index/hot/{{ stu_id }}/{{ grade }}" style="background-color: {{ color2 }}">热门图书</a>
         </div><!--选择功能部分-->
         <div class="list center">
             <table class="list_table" border="1">
@@ -55,9 +55,10 @@
 
         </div><!--列表部分-->
     </div><!--中间显示推荐部分-->
-
+<!--
     <div class="foot center">
         <span>made by Michael Yin</span>
     </div><!--底部显示-->
+-->
 </body>
 </html>
