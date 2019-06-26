@@ -13,6 +13,9 @@ Software Innovation Class Demo
 ![调研结果2](https://github.com/LPP2016/myRepo/blob/master/img-storage/%E5%9B%BE%E7%89%87%202.png)
 ![调研结果3](https://github.com/LPP2016/myRepo/blob/master/img-storage/%E5%9B%BE%E7%89%87%203.png)
 ![调研结果4](https://github.com/LPP2016/myRepo/blob/master/img-storage/%E5%9B%BE%E7%89%87%204.png)
+### 第二次客户验证
+我们与上海交通大学图书馆合作，为我们提供了2013~2016年的全部借阅记录。在第一次的验证基础上，我们通过对数据进行有针对性的分析，绘制出如下的图表。该表表示为每个院系的学生借阅的最多三类书。根据这张图表，我们将学生的借阅爱好分为以下两类：个人兴趣和专业兴趣。
+![Cate](https://github.com/CH609583349/myRepo/blob/master/img-storage/cate.png)
 附录：[关于图书馆推荐系统的调研_38269641.docx](./关于图书馆推荐系统的调研_38269641.docx)
 ## Solution
 根据当前我们提出的假设和调研发现的问题，我们提出了一个关于实现图书馆图书推荐系统Web端的解决方案，根据不同类型的同学们的喜好，推荐适合其阅读并符合其个人阅读兴趣的图书。
