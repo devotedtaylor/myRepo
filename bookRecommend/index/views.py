@@ -21,13 +21,14 @@ def index(request,stu_id,grade):
     #获取推荐结果
     #bookid_list = adjustrecommend(uid)
     #
-    sql_getreco= "select item_ids from rank where stu_id='"+stu_id+"' and stu_grade='"+grade+"'"
+    stu=stu_id
+    gra=grade
+    sql_getreco= "select item_ids from rank where stu_id='"+stu+"' and stu_grade='"+gra+"'"
     #bookid_list=[]
     cursor.execute(sql_getreco)
     for row in cursor.fetchall():
         #bookid_list.append(row[0])
-        bookid_list=row[0]
-    #
+        bookid_list=row[0].split(",")
 
     # print bookid_list
     bookdic = {}
