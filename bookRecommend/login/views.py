@@ -18,20 +18,23 @@ def login(request):
     #提交表单时执行
     if request.method=="POST":
         #从表单获取username
-        name = request.POST.get("username")
+        stu_id = request.POST.get("stu_id")
+        grade = request.POST.get("grade")
+        school = request.POST.get("school")
         #数据库连接
         db,cursor = connect()
         #定义sql语句，并查询
         # print len(name.encode('gbk'))
-        sql = "select username from user"
+        sql = "select stu_id, grade, school from user"
         cursor.execute(sql)
         # print cursor.execute(sql)
         for row in cursor.fetchall():
             # print len(row[0])
             #如果存在则返回主界面
             #if name.encode('gbk')==row[0]:
-            if name==row[0]:
-                return HttpResponseRedirect("/index/index/%s" % name)
+            if stu_id == row[0] and grade == row[1] and school == row[2]:
+                #return HttpResponseRedirect("/index/index/%s" % stu_id)
+                return HttpResponseRedirect("/index/index/%s/%s" % (stu_id , grade))
         #不存在fanhuilogin并提sta示错误
         return render_to_response("login.html",{
             'error':"你输入的用户不存在，请重新输入",
